@@ -1,0 +1,26 @@
+---For Subject---
+Should have Subject at the top
+
+Second line should have the name of the subject
+
+Third line should have the value of if there is sub-topic or not
+
+Every question should have ` at the start unless it is not a topic.
+If it does not have ` there is a new sub-topic with that name
+This works by creating a temp variable holding the whole line in the script
+If the first value is ` it knows that it needs to delete it 
+
+Each question should be seperated by ¬
+Every new thing should be split by a new line this creates a list of each line
+
+Hold a variable for the count of sub-topics so you add a subtopic then increment.
+This means you can then add the questions to the sub-topics
+
+---For new sub-topic---
+Should have SubTopic at the top
+
+Second Line should have the name of the subject
+
+The rest is just the questions
+Each new line symbolises a new question
+Each important variable of the questions is split by ¬ or `
