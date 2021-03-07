@@ -4,6 +4,8 @@ using UnityEngine;
 [System.Serializable]
 public class Sound
 {
+    //adds properties to sound clips to be adjustable
+
     public string name;
     public AudioClip clip;
 

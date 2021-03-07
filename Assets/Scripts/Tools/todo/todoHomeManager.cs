@@ -19,6 +19,7 @@ public class todoHomeManager : MonoBehaviour
 
    void Start()
    {
+       //sets the different buttons that will be needed to go to each list
        for(int x = 0; x < SaveManager.Instance.title_list().Count; x++)
        {
             GameObject toDoBtn = Instantiate(toDoPrefab) as GameObject;

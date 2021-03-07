@@ -40,6 +40,7 @@ public class toDoPage : MonoBehaviour
             rectTransform.offsetMin = new Vector2(rectTransform.offsetMin.x, (-175f * numOverContainer));
         }
 
+        //shows all the taks to do
         for(int x = 0; x != numOfToDos; x++)
         {
             GameObject toDo = Instantiate(toDoPrefab) as GameObject;
@@ -115,6 +116,8 @@ public class toDoPage : MonoBehaviour
         }
     }
 
+    //all movement to different scenes are done differently as they
+    //need to save any changes to any to-dos which are to be gotten rid of
     public void go_to_settings()
     {
         delete_all_completed();

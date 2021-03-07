@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using System.IO;
@@ -11,8 +11,10 @@ public class colourSliders : MonoBehaviour
     public GameObject[] sliders;
     //[r, g, b]
     public Text[] values;
+    
     public Animator colourWindow;
     public int currentColour = 0;
+    //current colour tells what color you are chaging e.g. primary accent or text
     public Image colourSquare;
 
     public Animator importWindow;
@@ -74,6 +76,7 @@ public class colourSliders : MonoBehaviour
     {
         values[i].text = (sliders[i].GetComponent<Slider>().value).ToString();
         draw_square();
+        //when you move a slider
     }
 
     public void open_window(int i)

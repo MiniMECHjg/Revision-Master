@@ -21,7 +21,7 @@ public class multi_choice2 : MonoBehaviour
             inputFields[1].GetComponent<InputField>().text = SaveManager.Instance.base_question_list()[SaveManager.Instance.current_subject()][SaveManager.Instance.current_topic()][SaveManager.Instance.current_question_to_edit()][2];
             inputFields[2].GetComponent<InputField>().text = SaveManager.Instance.base_question_list()[SaveManager.Instance.current_subject()][SaveManager.Instance.current_topic()][SaveManager.Instance.current_question_to_edit()][3];
             buttonText.text = "Edit This Multi";
-            if (inputFields.Count == 5)
+            if (inputFields.Count == 5) //if this is a 4 question multiple choice question
             {
                 inputFields[3].GetComponent<InputField>().text = SaveManager.Instance.base_question_list()[SaveManager.Instance.current_subject()][SaveManager.Instance.current_topic()][SaveManager.Instance.current_question_to_edit()][4];
                 inputFields[4].GetComponent<InputField>().text = SaveManager.Instance.base_question_list()[SaveManager.Instance.current_subject()][SaveManager.Instance.current_topic()][SaveManager.Instance.current_question_to_edit()][5];
@@ -57,7 +57,7 @@ public class multi_choice2 : MonoBehaviour
                 SaveManager.Instance.Save();
             }
             
-        } else if (inputFields.Count == 5)
+        } else if (inputFields.Count == 5) //if this is a 4 question multiple choice question
         {
             string question = inputFields[0].GetComponent<InputField>().text;
             string choice1 = inputFields[1].GetComponent<InputField>().text;

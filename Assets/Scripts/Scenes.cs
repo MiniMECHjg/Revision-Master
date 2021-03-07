@@ -192,6 +192,8 @@ public class Scenes : MonoBehaviour
         StartCoroutine(LoadLevel(21));
     }
 
+
+    //This is how we go to each scene to add an animation
     IEnumerator LoadLevel(int index)
     {
         transition.SetTrigger("start");

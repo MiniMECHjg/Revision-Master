@@ -38,6 +38,7 @@ public class scaler : MonoBehaviour
 
     }
 
+    //this rests containers to make sure any changes in resolution does not effect the use of the program
     public void reset_container(GameObject overallContainer, GameObject childContainer)
     {
         RectTransform childContainerRT = (RectTransform)childContainer.transform;

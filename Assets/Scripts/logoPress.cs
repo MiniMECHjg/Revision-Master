@@ -10,6 +10,7 @@ public class logoPress : MonoBehaviour
 
     public void press_button()
     {
+        //plays a simple animation if a logo is clicked
         numText.text = Random.Range(0, 10).ToString();
         logoAnim.SetTrigger("logoPressed");
     }

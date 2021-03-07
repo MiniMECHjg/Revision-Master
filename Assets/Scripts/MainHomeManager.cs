@@ -35,6 +35,7 @@ public class MainHomeManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //maths to find out how it should be displayed
         List<string> subjects = SaveManager.Instance.subjects();
         double rows = (subjects.Count)/3;
         int rowCount = (int)Math.Ceiling(rows);
@@ -50,6 +51,7 @@ public class MainHomeManager : MonoBehaviour
             subjectText.SetActive(true);
         }
 
+        //puts down the subject buttons after making them
         for(int i = 0; i != subjects.Count; i++)
         {
             GameObject subject_btn = Instantiate(subjectPrefab) as GameObject;
@@ -80,6 +82,7 @@ public class MainHomeManager : MonoBehaviour
         FindObjectOfType<scaler>().reset_container(overallContainerGO, subjectsContainer);
     }
 
+    //simply draws all the pie charts made very simple
     public void set_pie_charts()
     {
         int[] correct = SaveManager.Instance.correct_array();
@@ -121,6 +124,7 @@ public class MainHomeManager : MonoBehaviour
 
     }
 
+    //brings up menu on the left hand side
     public void toggleLHS()
     {
         if(LHSout == false)
@@ -134,6 +138,7 @@ public class MainHomeManager : MonoBehaviour
         }
     }
 
+    //brings up menu on the right hand side
     public void toggleRHS()
     {
         if(RHSout == false)
@@ -183,6 +188,8 @@ public class MainHomeManager : MonoBehaviour
 
     void Update()
     {
+        //used to know if resolution changes e.g. phone put on side
+        //this allows the app to redraw and decide how it should look
         int x = Screen.width;
         int y = Screen.height;
         if(x != oldResolution[0] || y != oldResolution[1])

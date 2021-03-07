@@ -27,6 +27,7 @@ public class audio_manager : MonoBehaviour
 
         foreach(Sound s in sounds)
         {
+            //gets the parameters of the sounds
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
 
@@ -36,20 +37,24 @@ public class audio_manager : MonoBehaviour
         }
     }
 
+    //this sound it to be played if user gets a question right
     public void correct()
     {
         Play("Correct");
     }
 
+    //sound played if user gets a question wrong
     public void wrong()
     {
         Play("Wrong");
     }
 
-
+    //this function plays the sound with the name name
     public void Play(string name)
     {
+        //finds the sound with the name name
         Sound s = Array.Find(sounds, sound => sound.name == name);
+        //plays the sound
         s.source.Play();
     }
 }

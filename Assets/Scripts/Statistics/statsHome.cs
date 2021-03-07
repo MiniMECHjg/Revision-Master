@@ -38,6 +38,8 @@ public class statsHome : MonoBehaviour
         FindObjectOfType<scaler>().reset_container(overallContainerGO, containerOfStats);
     }
 
+    //sets all the pie charts on the screen by using the correct image on top and filling it in terms of degrees
+    //circular fill
     public void set_correct_pie_charts()
     {
         int[] correct = SaveManager.Instance.correct_array();
@@ -78,6 +80,7 @@ public class statsHome : MonoBehaviour
         }
     }
 
+    //sets more pie charts the same way
     public void set_questions_done_pie_charts()
     {
         int[] correct = SaveManager.Instance.all_correct();
